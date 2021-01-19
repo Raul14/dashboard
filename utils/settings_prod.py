@@ -1,4 +1,6 @@
 """Prod Settings global consts"""
+import os
+
 SEAL_ENDPOINT = os.environ.get('SEAL_ENDPOINT', '')
 
 USE_PROXY = bool(os.environ.get('USE_PROXY', False))
