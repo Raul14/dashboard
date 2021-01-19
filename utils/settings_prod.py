@@ -3,8 +3,7 @@ import os
 
 SEAL_ENDPOINT = os.environ.get('SEAL_ENDPOINT', '')
 
-_USE_PROXY_STR = "" if os.environ.get('USE_PROXY', "False") == "False" else "True"
-USE_PROXY = bool(_USE_PROXY_STR)
+USE_PROXY = False if (os.environ.get('USE_PROXY', 'False') == 'False') else True
 
 SEAL_PROXY_HTTP_ENDPOINT = os.environ.get('SEAL_PROXY_HTTP_ENDPOINT', '')
 SEAL_PROXY_HTTPS_ENDPOINT = os.environ.get('SEAL_PROXY_HTTPS_ENDPOINT', '')
